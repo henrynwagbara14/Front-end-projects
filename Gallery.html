@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <h1>Photo <span> <em> Gallery</em> </span></h1>
+        <br>
+        <hr>
+        <br>
+
+        <div class="gallery-container">
+        <div class="gallery">        
+        
+        <div class="image">
+        <img src="img/IMG_9910.JPG" alt="Photoshoot - headshot" onclick="openModal(this.src)">
+        </div>        
+        
+        <div class="image">
+        <img src="img/GG3x3.JPG" alt="GG3x3 Tournament" class="offtop" onclick="openModal(this.src)">
+        </div>        
+        
+        <div class="image">
+        <img src="img/IMG_0390.JPG" alt="Photoshoot - green" class="offtop" onclick="openModal(this.src)">
+        </div>        
+        
+        <div class="image">
+        <img src="img/forex.jpeg" alt="Forex onclick="openModal(this.src)">
+        </div>       
+        
+        <div class="image">
+        <img src="img/html css javascript.jpg" alt="Coding Technologies" onclick="openModal(this.src)">
+        </div>
+
+        <div class="image">
+        <img src="img/self development books.jpg" alt="Self Development Books" onclick="openModal(this.src)">
+        </div>        
+        
+        <div class="image">        
+        <img src="img/BodyfitBlue.JPG" alt="SoukaBodyFit Shoot" class="offtop" onclick="openModal(this.src)">
+        </div>
+
+        <div class="image">
+        <img src="img/Graduation.jpg" alt="Graduation" class="offtop" onclick="openModal(this.src)">
+        </div>
+        
+        <div class="image">
+        <img src="img/IMG_0564.JPG" alt="Photoshoot - Sports" class="offtop" onclick="openModal(this.src)">
+        </div>
+ 
+        <div class="image">
+        <img src="img/naruto.jpeg" alt="Naruto - Anime" class="offleft" onclick="openModal(this.src)">
+        </div>
+
+        <div class="image">
+        <img src="img/ShirtTie.png" alt="Corporate Henry" onclick="openModal(this.src)">
+        </div>        
+        
+        <div class="image">
+        <img src="img/Supply-and-demand.jpg" alt="Economics" class="fill" onclick="openModal(this.src)">
+        </div>
+
+        </div>
+
+    </div>
+
+    <button onclick="Logout()">Logout</button>
+    <br>   
+    <script src="script.js"></script>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+
+        <script>
+            // Function to open the modal
+        function openModal(imageSrc) {
+            document.getElementById("myModal").style.display = "block"; // Show the modal
+            document.getElementById("modalImage").src = imageSrc; // Set the modal image source
+        }
+        
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none"; // Hide the modal
+        }
+        </script>
+    </div>
+
+ 
+
+<footer class="footer">
+    <p id="copyright"></p>
+<script>
+    const year = new Date().getFullYear();
+    document.getElementById("copyright").innerHTML = `&copy; ${year} Henry Nwagbara. All rights reserved.`;
+</script>
+</footer>
+</body>
+
+</html>

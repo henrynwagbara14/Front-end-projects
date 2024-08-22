@@ -1,127 +1,161 @@
-body {
-    margin: 0;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding: 0;
-    overflow-x: hidden;
-}
-
-
-.background-container {
-    position: relative;
-    width: 100%; 
-    height: 480px; 
-    overflow: hidden; 
-}
-
-.background-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('img/IMG_0527.JPG'); 
-    background-size: cover; 
-    background-repeat: no-repeat; 
-    background-position: center top;
-    filter: grayscale(40%) blur(2px);
-    z-index: -1; 
-}
-
-.topnav {
-    margin: 0;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    display: flex;
-    justify-content: space-between;
+Body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #f4f4f4;
     align-items: center;
-    background-color: #000000;
-    padding: 5px 10px;
+    text-align: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
     height: 100%;
-    width: 100%;
+}
+Body h1{
+    color: #454545;
 }
 
-
-
-
-.logo {
-    height: 70px;
-    margin-right: 10px;
-}
-
-.nav-links a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 18px;
-}
-
-
-.bordered-span {
-    padding: 5px 10px; 
-    border-radius: 3px; 
-    background-color: #ac0000; 
-    color: #ffffff; 
-}
-
-
-.nav-links a:hover {
-    color: #ac0000;
-}
-
-.dropdown-menu a:hover{
-    color: #ac0000;
-}
-
-body h1{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 24px;
-    position: relative;
-    padding: 6px 12px;
-    text-align: center;
-    margin-top: 170px;
-}
-
-body p{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 24px;
-    text-align: center;
-    position: relative;
-    padding: 1px 1px;
-    text-decoration: none;
+Body h1 span{
+    background-color: #454545;
+    border-radius: 3px;
     color: white;
 }
 
-.startnow{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 30px;
+
+hr {
+    border: none;
+    border-top: 2px solid #454545;
+    margin: 20px 0;
+    width: 80%;
+    max-width: 600px;
+}
+
+
+
+.login-container{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    position: relative;
-    padding: 1px 2px;
+}
+
+.login-container input{
+        width: 100%;
+        padding: 5px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+}
+
+.forgot-password {
+    margin-top: 5px;
+}
+
+.forgot-password a {
     text-decoration: none;
-    color: #ac0000;
+    font-size: 0.5em;
+    color: black;
 }
 
-.footer {
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+button:hover {
+    background-color: #454545;
+    color: white;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px; 
+}
+
+.image img {
+    width: 250px; 
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 8px; 
+}
+
+.image img:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+.offleft{
+    object-position: left;
+}
+
+.offtop{
+    object-position: top;
+}
+
+.fill{
+   height: 300px;
+   width: 400px;
+}
+
+.modal {
+    display: none; 
     position: fixed;
-    bottom: 0;
+    z-index: 1;
     left: 0;
+    top: 0;
     width: 100%;
-    background-color: #000000;
-    text-align: center;
-    padding: 5px 10px;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
 }
 
-.footer a {
-    margin: 0 10px;
-    display: inline-block;
+.modal-content {
+    margin: auto;
+    padding: 80px;
+    display: block;
+    max-height: 400px;
+    width: auto;
 }
 
-.footer img {
-    width: 30px;
-    height: auto; 
-    vertical-align: middle;
-    filter: invert(1) brightness(1) contrast(0.9);
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.gallery {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 40px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.gallery-container{
+    width: 90%;
 }
 
 
@@ -129,240 +163,13 @@ body p{
     display: flex;
     justify-content: center;
     align-items: center; 
-    background-color: #000000; 
+    background-color: #454545; 
     color: #fff;
-    padding: 3px 0; 
-    gap: 10px; 
-    flex-wrap: wrap; 
-}
-
-.contact-info{
-    font-size: 15px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-}
-
-.footer-item {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #fff;
-}
-
-.footer-icon {
-    width: 18px;
-    height: auto;
-    margin-right: 8px;
+    padding: 5px;
+    font-size: 2em;
+    width: 100%;
 }
 
 #copyright {
-    flex-basis: 100%;
-    font-size: 10px;
-    text-decoration: none;
-
-}
-
-/* repsonsive styles */
-
-@media screen and (max-width: 600px){
-    .logo {
-        height: 50px;
-        margin-right: 10px;
-    }
-    .nav-links {
-        display: none;
-    }
-
-    .hamburger-menu{
-        display: block;
-        position: relative;
-        z-index: 1000;
-    }
-
-    .hamburger-icon {
-        font-size: 50px;
-        cursor: pointer;
-        color: white;
-        border-radius: 1px;
-        margin-right: 20px;
-
-    }
-    
-    .dropdown-menu{
-        display: none;
-        flex-direction: column;
-        background-color: #000000;
-        position: absolute;
-        padding: 12px 24px;
-        top: 40px;
-        right: 10px;
-        width: 200px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .dropdown-menu a{
-        display: block;
-        padding: 20px;
-        text-decoration: none;
-        color: white;
-        padding: 6px 12px;
-        border-bottom: 1px solid #000000;
-    }
-
-    .dropdown-menu a:hover {
-        background-color: #000000;
-    }
-
-    body h1{
-    font-size: 24px;
-}
-   body p{
-    font-size: 20px;
-}
-
-.startnow{
-    font-size: 20px;
-}
-
-.contact-info{
-      font-size: 8px;
-    }
-
-.footer-icon {
-        width: 12px;
-        height: auto;
-        margin-right: 6px;
-    }
-
-    #copyright {
-        font-size: 6px;
-    }
-
-}
-
-
-@media screen and (min-width: 600px) and (max-width: 767px){
-    .logo {
-        height: 50px;
-        margin-right: 10px;
-    }
-    .nav-links {
-        display: none;
-    }
-
-    .hamburger-menu{
-        display: block;
-        position: relative;
-        z-index: 1000;
-    }
-
-    .hamburger-icon {
-        font-size: 50px;
-        cursor: pointer;
-        color: white;
-        border-radius: 1px;
-        margin-right: 20px;
-    }
-    
-    .dropdown-menu{
-        display: none;
-        flex-direction: column;
-        background-color: #000000;
-        position: absolute;
-        padding: 12px 24px;
-        top: 40px;
-        right: 10px;
-        width: 200px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    .dropdown-menu a{
-        display: block;
-        padding: 20px;
-        text-decoration: none;
-        color: white;
-        padding: 6px 12px;
-        border-bottom: 1px solid #000000;
-    }
-
-    .dropdown-menu a:hover {
-        background-color: #000000;
-    }
-
-    body h1{
-    font-size: 24px;
-}
-   body p{
-    font-size: 20px;
-}
-
-.startnow{
-    font-size: 20px;
-}
-
-.contact-info{
-      font-size: 12px;
-    }
-
-.footer-icon {
-        width: 12px;
-        height: auto;
-        margin-right: 6px; 
-    }
-
-    #copyright {
-        font-size: 12px;
-    }
-
-}
-
-
-@media screen and (min-width: 768px){
-    .hamburger-menu{
-        display: none;
-       }
-
-    .hamburger-icon {
-       display: none;
-    }
-    
-    .logo {
-        height: 70px;
-        margin-right: 10px;
-    }
-    .nav-links a {
-        margin-left: 8px;
-        margin-right: 8px;
-        font-size: 14px;
-    }
-       
-    body h1{
-    font-size: 28px;
-}
-   body p{
-    font-size: 24px;
-}
-
-.startnow{
-    font-size: 24px;
-}
-   .contact-info{
-      font-size: 12px;
-    }
-
-.footer-icon {
-        width: 14px;
-        height: auto;
-        margin-right: 6px; 
-    }
-
-    #copyright {
-        font-size: 10px;
-    }
-
-
-.footer img {
-        width: 24px;
-        height: auto;
-}
-
+    font-size: 14px;
 }
