@@ -8,7 +8,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     const validPassword = 'password';
 
     if (username === validUsername && password === validPassword) {
-        window.location.href = 'Gallery.html';
+        window.location.href = 'gallery.html';
     } else {
         document.getElementById('errorMessage').textContent = 'Invalid username or password.';
     }
